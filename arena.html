@@ -207,6 +207,7 @@ function pulseBar(mode, winner){
 /* 🔒 CORE MODULE: MODE RANDOMIZER */
 /* DO NOT MODIFY — DEPENDENCIES: GAME LOOP / TITLE THEMES / STATS BUCKETS */
 /* ===================== */
+
 function pickMode(){
   const r = Math.random();
   if(r < 0.40) return "click";
@@ -223,7 +224,7 @@ function newBattle(){
   if(inTop5) return;
 
   const mode=pickMode();
-  window.mode=mode;
+window.mode = mode;
 
   const t=document.getElementById("title");
 
@@ -239,11 +240,11 @@ function newBattle(){
   const L=streamers[a], R=streamers[b];
 
   document.getElementById("battle").innerHTML = `
-    <div class="card" onclick="vote('${L.name}','${R.name}')">
+    <div class="card" onclick="vote('${L.name}','${R.name}','${mode}')">
       <img src="${L.img}">
       <div class="name">${L.name}</div>
     </div>
-    <div class="card" onclick="vote('${R.name}','${L.name}')">
+    <div class="card" onclick="vote('${R.name}','${L.name}','${mode}')">
       <img src="${R.img}">
       <div class="name">${R.name}</div>
     </div>
@@ -254,7 +255,7 @@ function newBattle(){
 /* 🔒 CORE MODULE: VOTING ENGINE */
 /* DO NOT MODIFY — DEPENDENCIES: FIREBASE WRITES / RESULT TEXT / TOP 5 TRIGGERS */
 /* ===================== */
-async function vote(winner,loser){
+async function vote(winner,loser,mode){
 
   if(window.locked) return;
   window.locked = true;
