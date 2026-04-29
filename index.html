@@ -136,7 +136,7 @@ td {
 <!-- Controls logo placement and external link -->
 <!-- ===================== -->
 <div style="position:relative; width:100%; height:200px;">
-  <a href="https://mogalytics.github.io/index/arena.html?v=2" target="_blank"
+<a href="https://mogalytics.github.io/index/arena.html?v=2" target="_blank"
      style="position:absolute; left:22%; top:50%; transform:translate(-50%,-50%);">
     <img src="Arena.webp" width="140">
   </a>
@@ -151,6 +151,7 @@ td {
 <!-- 🔒 CORE MODULE: DATA TABLE -->
 <!-- PRODUCTION LOCK -->
 <!-- Displays all streamer ranking data -->
+
 <!-- Structure must match JS badge system expectations -->
 <!-- ===================== -->
 <table>
@@ -165,66 +166,73 @@ td {
 <!-- ===================== -->
 <!-- 🔒 CORE MODULE: STREAMER ROWS -->
 <!-- PRODUCTION LOCK -->
-<!-- Each row must include:
-     - image link
-     - badges div with correct data-name
-     - order cell
--->
-<!-- Adding rows is SAFE. Editing structure is NOT. -->
 <!-- ===================== -->
 
 <tr>
 <td><a href="https://kick.com/clavicular" target="_blank"><img src="Clavicular.webp" width="207" height="250"></a><div class="badges" data-name="Clav"></div></td>
 <td><span class="order-cell">Clav <img src="1 NP_Dragon.webp" width="16"></span></td>
-<td><p>Excellent looks & presentation</p></td>
+<td><p>Still the cleanest total package</p></td>
 </tr>
 
 <tr>
 <td><a href="https://kick.com/androgenic" target="_blank"><img src="Andro.webp" width="293" height="227"></a><div class="badges" data-name="Androgenic"></div></td>
 <td><span class="order-cell">Andro <img src="1 LP_Dragon.webp" width="16"></span></td>
-<td><p>THE FRAME IS RIDICULOUS</p></td>
+<td><p>Frame remains impossible to ignore</p></td>
 </tr>
 
 <tr>
 <td><a href="https://kick.com/gymskin" target="_blank"><img src="Gymskin.webp" width="160" height="160"></a><div class="badges" data-name="Gymskin"></div></td>
 <td><span class="order-cell">Gymskin</span></td>
-<td><p>AN ABSOLUTE UNIT</p></td>
+<td><p>Consistent presence keeps him elite</p></td>
 </tr>
 
 <tr>
-<td><a href="https://www.twitch.tv/xqc" target="_blank"><img src="XQC.webp" width="310" height="220"></a><div class="badges" data-name="xQc"></div></td>
+<td><a href="https://www.twitch.tv/xqc" target="_blank"><img src="xQc.webp" width="310" height="220"></a><div class="badges" data-name="xQc"></div></td>
 <td><span class="order-cell">xQc</span></td>
-<td><p>GOATED</p></td>
-</tr>
-
-<tr>
-<td><a href="https://www.youtube.com/@IShowSpeed" target="_blank"><img src="SPEED.webp" width="250" height="217"></a><div class="badges" data-name="IShowSpeed"></div></td>
-<td><span class="order-cell">ISHOWSPEED</span></td>
-<td><p>Great vibe</p></td>
+<td><p>IRL effort and renewed motion rewarded</p></td>
 </tr>
 
 <tr>
 <td><a href="https://www.twitch.tv/Lacy" target="_blank"><img src="Lacy.webp" width="240" height="241"></a><div class="badges" data-name="Lacy"></div></td>
 <td><span class="order-cell">Lacy</span></td>
-<td><p>Special talent</p></td>
+<td><p>Charisma stays dangerous every week</p></td>
+</tr>
+
+<tr>
+<td><a href="https://www.youtube.com/@IShowSpeed" target="_blank"><img src="SPEED.webp" width="250" height="217"></a><div class="badges" data-name="IShowSpeed"></div></td>
+<td><span class="order-cell">ISHOWSPEED</span></td>
+<td><p>Huge motion, but can channel more impact</p></td>
 </tr>
 
 <tr>
 <td><a href="https://www.twitch.tv/marlon" target="_blank"><img src="Marlon.webp" width="293" height="253"></a><div class="badges" data-name="Marlon"></div></td>
 <td><span class="order-cell">Marlon</span></td>
-<td><p>Fresh content</p></td>
+<td><p>Strong base, ready for a jump</p></td>
 </tr>
 
 <tr>
 <td><a href="https://kick.com/drago" target="_blank"><img src="Drago.webp" width="273" height="251"></a><div class="badges" data-name="Drago"></div></td>
 <td><span class="order-cell">Drago</span></td>
-<td><p>INSANE POTENTIAL</p></td>
+<td><p>High ceiling if momentum connects</p></td>
 </tr>
 
 <tr>
 <td><a href="https://kick.com/gymskin" target="_blank"><img src="T.webp" width="277" height="238"></a><div class="badges" data-name="T"></div></td>
 <td><span class="order-cell">T</span></td>
-<td><p>Main character AURA</p></td>
+<td><p>Aura intact, needs a breakout week</p></td>
+</tr>
+
+<tr>
+<td>
+<img src="Streamer.webp"
+width="234"
+height="240"
+onclick="openRandomLink()"
+style="cursor:pointer;">
+<div class="badges" data-name="Unknown"></div>
+</td>
+<td><span class="order-cell">???</span></td>
+<td><p>Unknown pressure entering rankings</p></td>
 </tr>
 
 </table>
@@ -236,8 +244,6 @@ td {
 <!-- ===================== -->
 <!-- 🔒 CORE MODULE: FIREBASE LOADER -->
 <!-- PRODUCTION LOCK -->
-<!-- External dependency for live data -->
-<!-- Version-specific compatibility required -->
 <!-- ===================== -->
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
@@ -245,14 +251,6 @@ td {
 <!-- ===================== -->
 <!-- 🔒 CORE MODULE: DATA ENGINE -->
 <!-- PRODUCTION LOCK -->
-<!-- Handles:
-     - caching
-     - fallback rendering
-     - Firebase fetch
-     - badge generation
--->
-<!-- This is the HEART of the page -->
-<!-- Any modification must be intentional and tested -->
 <!-- ===================== -->
 <script>
 window.addEventListener("load", async () => {
@@ -262,7 +260,6 @@ const emoji = { click:"🟢", charisma:"🔥", mog:"💎", aura:"✨" };
 
 let memoryCache = null;
 
-/* SAFE RENDER ENGINE */
 function render(data){
   if(!data) return;
 
@@ -291,7 +288,6 @@ function render(data){
   });
 }
 
-/* LOCAL CACHE LOAD */
 function loadLocal(){
   try{
     const saved = localStorage.getItem("mog_badges_cache");
@@ -300,14 +296,12 @@ function loadLocal(){
   return null;
 }
 
-/* LOCAL CACHE SAVE */
 function saveLocal(data){
   try{
     localStorage.setItem("mog_badges_cache", JSON.stringify(data));
   }catch{}
 }
 
-/* RESILIENT FETCH SYSTEM */
 async function fetchWithRetry(db, attempts=5){
   let delay = 500;
 
@@ -333,14 +327,12 @@ const app = firebase.initializeApp({
 
 const db = firebase.firestore();
 
-/* CACHE FIRST STRATEGY */
 const localData = loadLocal();
 if(localData){
   memoryCache = localData;
   render(localData);
 }
 
-/* LIVE DATA FETCH */
 const fresh = await fetchWithRetry(db);
 
 if(fresh){
