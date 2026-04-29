@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ===================== page 1 -->
+<!-- 🔒 CORE MODULE: RANDOM LINK REDIRECT -->
+<!-- PRODUCTION LOCK -->
+<!-- This function controls external navigation behavior. -->
+<!-- DO NOT MODIFY unless explicitly changing redirect destinations or logic. -->
+<!-- Any change here affects user navigation flow. -->
+<!-- ===================== -->
+<script>
+function openRandomLink() {
+  const links = [
+    "https://tradingeconomics.com/commodity/silver",
+    "https://www.fortnite.com/download",
+    "https://tapcaps.com/",
+    "https://www.ubisoft.com/en-us/game/rainbow-six/siege",   
+    "https://pokemonfanon.fandom.com/wiki/Flannery_(Quilafa)",
+    "https://tapcaps.com/",    
+	"https://yourdomain.com/drew.webp",
+	"https://yourdomain.com/NOTDREW.webp",
+	"https://yourdomain.com/drew.webp",
+  ];
+  const random = links[Math.floor(Math.random() * links.length)];
+  window.location.href = random;
+}
+</script>
+
+<!-- ===================== -->
+<!-- 🔒 CORE MODULE: DOCUMENT CONFIGURATION -->
+<!-- PRODUCTION LOCK -->
+<!-- Charset + Title affect rendering, SEO, and browser compatibility -->
+<!-- DO NOT MODIFY unless required -->
+<!-- ===================== -->
+<meta charset="UTF-8">
+<title>MOGALYTICS</title>
+
+<!-- ===================== -->
+<!-- 🔒 CORE MODULE: FONT LOADER -->
+<!-- PRODUCTION LOCK -->
+<!-- External dependency for typography consistency -->
+<!-- Removing or changing may affect layout and branding -->
+<!-- ===================== -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+<!-- ===================== -->
+<!-- 🔒 CORE MODULE: GLOBAL STYLE SYSTEM -->
+<!-- PRODUCTION LOCK -->
+<!-- Controls layout, spacing, and visual hierarchy -->
+<!-- Changes here cascade across entire UI -->
+<!-- Modify ONLY with clear design intent -->
+<!-- ===================== -->
+<style>
+body {
+  margin: 0;
+  background-color: #FAF6D8;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+h1 {
+  margin-top: 20px;
+  margin-bottom: 7px;
+  font-size: 48px;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+colgroup col:nth-child(1) { width: 111%; }
+colgroup col:nth-child(2) { width: 30%; }
+colgroup col:nth-child(3) { width: 111%; }
+
+th, td {
+  text-align: center;
+  padding: 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+th {
+  background-color: #C0392B;
+  color: white;
+}
+td {
+  height: 60px;
+}
+.order-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ===== BADGE SYSTEM ===== */
+/* PRODUCTION LOCK */
+/* Used by Firebase rendering logic */
+/* DO NOT rename classes or structure */
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  margin-top: 6px;
+}
+.badge {
+  white-space: nowrap;
+}
+/* ======================== */
+
+.disclaimer {
+  margin-top: 30px;
+  font-size: 12px;
+  color: rgba(0,0,0,0.45);
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ===================== -->
+<!-- 🔒 CORE MODULE: MAIN CONTAINER -->
+<!-- PRODUCTION LOCK -->
+<!-- Root layout wrapper -->
+<!-- Structural dependency for all UI elements -->
+<!-- ===================== -->
+<div class="container">
+
+<!-- ===================== -->
+<!-- 🔒 CORE MODULE: HEADER / BRANDING -->
+<!-- PRODUCTION LOCK -->
+<!-- Controls logo placement and external link -->
+<!-- ===================== -->
+<div style="position:relative; width:100%; height:200px;">
+  <a href="https://www.google.com" target="_blank"
+     style="position:absolute; left:22%; top:50%; transform:translate(-50%,-50%);">
+    <img src="Arena.webp" width="140">
+  </a>
+
+<h1>
+  <a href="" onclick="location.reload(); return false;">
+    <img src="Logo.png" width="600" height="200"/>
+  </a>
+</h1>
+
+<!-- ===================== -->
+<!-- 🔒 CORE MODULE: DATA TABLE -->
+<!-- PRODUCTION LOCK -->
+<!-- Displays all streamer ranking data -->
+<!-- Structure must match JS badge system expectations -->
+<!-- ===================== -->
+<table>
+<colgroup><col><col><col></colgroup>
+
+<tr>
+  <th>Streamer</th>
+  <th>Order</th>
+  <th>Reason</th>
+</tr>
+
+<!-- ===================== -->
+<!-- 🔒 CORE MODULE: STREAMER ROWS -->
+<!-- PRODUCTION LOCK -->
+<!-- Each row must include:
+     - image link
+     - badges div with correct data-name
+     - order cell
+-->
+<!-- Adding rows is SAFE. Editing structure is NOT. -->
+<!-- ===================== -->
+
+<tr>
+<td><a href="https://kick.com/clavicular" target="_blank"><img src="Clavicular.webp" width="207" height="250"></a><div class="badges" data-name="Clav"></div></td>
+<td><span class="order-cell">Clav <img src="1 NP_Dragon.webp" width="16"></span></td>
+<td><p>Excellent looks & presentation</p></td>
+</tr>
+
+<tr>
+<td><a href="https://kick.com/androgenic" target="_blank"><img src="Andro.webp" width="293" height="227"></a><div class="badges" data-name="Androgenic"></div></td>
+<td><span class="order-cell">Andro <img src="1 LP_Dragon.webp" width="16"></span></td>
+<td><p>THE FRAME IS RIDICULOUS</p></td>
+</tr>
+
+<tr>
+<td><a href="https://kick.com/gymskin" target="_blank"><img src="Gymskin.webp" width="160" height="160"></a><div class="badges" data-name="Gymskin"></div></td>
+<td><span class="order-cell">Gymskin</span></td>
+<td><p>AN ABSOLUTE UNIT</p></td>
+</tr>
+
+<tr>
+<td><a href="https://www.twitch.tv/xqc" target="_blank"><img src="xQc.webp" width="310" height="220"></a><div class="badges" data-name="xQc"></div></td>
+<td><span class="order-cell">xQc</span></td>
+<td><p>GOATED</p></td>
+</tr>
+
+<tr>
+<td><a href="https://www.youtube.com/@IShowSpeed" target="_blank"><img src="SPEED.webp" width="250" height="217"></a><div class="badges" data-name="IShowSpeed"></div></td>
+<td><span class="order-cell">ISHOWSPEED</span></td>
+<td><p>Great vibe</p></td>
+</tr>
+
+<tr>
+<td><a href="https://www.twitch.tv/Lacy" target="_blank"><img src="Lacy.webp" width="240" height="241"></a><div class="badges" data-name="Lacy"></div></td>
+<td><span class="order-cell">Lacy</span></td>
+<td><p>Special talent</p></td>
+</tr>
+
+<tr>
+<td><a href="https://www.twitch.tv/marlon" target="_blank"><img src="Marlon.webp" width="293" height="253"></a><div class="badges" data-name="Marlon"></div></td>
+<td><span class="order-cell">Marlon</span></td>
+<td><p>Fresh content</p></td>
+</tr>
+
+<tr>
+<td><a href="https://kick.com/drago" target="_blank"><img src="Drago.webp" width="273" height="251"></a><div class="badges" data-name="Drago"></div></td>
+<td><span class="order-cell">Drago</span></td>
+<td><p>INSANE POTENTIAL</p></td>
+</tr>
+
+<tr>
+<td><a href="https://kick.com/gymskin" target="_blank"><img src="T.webp" width="277" height="238"></a><div class="badges" data-name="T"></div></td>
+<td><span class="order-cell">T</span></td>
+<td><p>Main character AURA</p></td>
+</tr>
+
+</table>
+
+<div class="disclaimer">Disclaimer text</div>
+
+</div>
+
+<!-- ===================== -->
+<!-- 🔒 CORE MODULE: FIREBASE LOADER -->
+<!-- PRODUCTION LOCK -->
+<!-- External dependency for live data -->
+<!-- Version-specific compatibility required -->
+<!-- ===================== -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<!-- ===================== -->
+<!-- 🔒 CORE MODULE: DATA ENGINE -->
+<!-- PRODUCTION LOCK -->
+<!-- Handles:
+     - caching
+     - fallback rendering
+     - Firebase fetch
+     - badge generation
+-->
+<!-- This is the HEART of the page -->
+<!-- Any modification must be intentional and tested -->
+<!-- ===================== -->
+<script>
+window.addEventListener("load", async () => {
+
+const modes = ["click","charisma","mog","aura"];
+const emoji = { click:"🟢", charisma:"🔥", mog:"💎", aura:"✨" };
+
+let memoryCache = null;
+
+/* SAFE RENDER ENGINE */
+function render(data){
+  if(!data) return;
+
+  const cache = {};
+
+  modes.forEach(mode=>{
+    const sorted = Object.entries(data[mode] || {})
+      .sort((a,b)=>b[1]-a[1])
+      .slice(0,10);
+
+    sorted.forEach(([name],i)=>{
+      if(!cache[name]) cache[name] = {};
+      cache[name][mode] = i+1;
+    });
+  });
+
+  document.querySelectorAll(".badges").forEach(el=>{
+    const name = el.dataset.name;
+    const entry = cache[name];
+    if(!entry) return;
+
+    el.innerHTML = Object.entries(entry)
+      .map(([mode,rank]) =>
+        `<span class="badge" title="Top 10 ${mode} (Rank #${rank})">${emoji[mode]} #${rank}</span>`
+      ).join("");
+  });
+}
+
+/* LOCAL CACHE LOAD */
+function loadLocal(){
+  try{
+    const saved = localStorage.getItem("mog_badges_cache");
+    if(saved) return JSON.parse(saved);
+  }catch{}
+  return null;
+}
+
+/* LOCAL CACHE SAVE */
+function saveLocal(data){
+  try{
+    localStorage.setItem("mog_badges_cache", JSON.stringify(data));
+  }catch{}
+}
+
+/* RESILIENT FETCH SYSTEM */
+async function fetchWithRetry(db, attempts=5){
+  let delay = 500;
+
+  for(let i=0;i<attempts;i++){
+    try{
+      const snap = await db.collection("stats").doc("global").get();
+      return snap.data() || {};
+    }catch(e){
+      await new Promise(r=>setTimeout(r, delay));
+      delay *= 2;
+    }
+  }
+  return null;
+}
+
+try {
+
+const app = firebase.initializeApp({
+  apiKey:"AIzaSyA8Uo2ova4ink0OH4OxrheYNnQWUq86xIk",
+  authDomain:"mogalytics-3c9e2.firebaseapp.com",
+  projectId:"mogalytics-3c9e2"
+});
+
+const db = firebase.firestore();
+
+/* CACHE FIRST STRATEGY */
+const localData = loadLocal();
+if(localData){
+  memoryCache = localData;
+  render(localData);
+}
+
+/* LIVE DATA FETCH */
+const fresh = await fetchWithRetry(db);
+
+if(fresh){
+  memoryCache = fresh;
+  saveLocal(fresh);
+  render(fresh);
+}
+
+} catch(e) {
+  console.log("Badge system safe fallback", e);
+}
+
+});
+</script>
+
+</body>
+</html>
