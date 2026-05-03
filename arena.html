@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 <!-- ===================== page 2-->
 <!-- 🔒 CORE MODULE: DOCUMENT HEAD / PAGE IDENTITY -->
@@ -97,6 +98,34 @@ body {
 .stream.rank3 { width:75px; }
 .stream.rank4 { width:63px; }
 .stream.rank5 { width:55px; }
+
+@media (max-width: 768px) {
+  .card {
+    width:150px;
+    padding:8px;
+  }
+
+  .card img {
+    height:180px;
+  }
+
+  .battle {
+    gap:16px;
+  }
+
+  #chartGrid.chart-grid {
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  #chartGrid .chart-item {
+    padding:10px;
+  }
+
+  #chartGrid .chart-item canvas {
+  height:160px !important;
+}
+}
 </style>
 </head>
 
@@ -106,9 +135,9 @@ body {
 <!-- DO NOT MODIFY — DEPENDENCIES: GAME LOOP / DOM TARGETS / BUTTON ACTIONS -->
 <!-- IDs used by JavaScript: title, battle, result, chartBox, chartGrid -->
 <!-- ===================== -->
-	<div style="text-align:center; margin-bottom:20px;">
   <a href="https://mogalytics.github.io/index/" target="_blank">
-    <img src="Logo.png" alt="Logo" style="max-width:500px; height:auto;">
+    <img src="../LogoArena.webp" alt="Logo"
+         style="width:100%; max-width:500px; height:auto; display:block; margin:0 auto;">
   </a>
 </div>
 	
@@ -499,10 +528,15 @@ mode==="mog" ? "#00ffff" :
 
   modes.forEach(mode=>{
     const sorted = Object.entries(data[mode] || {})
-      .sort((a,b)=>b[1]-a[1])
-      .slice(0,10);
+  .sort((a,b)=>b[1]-a[1])
+  .slice(0, window.innerWidth <= 768 ? 5 : 10);
 
-    const labels = sorted.map(x=>x[0]);
+    const labels = sorted.map(x=>{
+  const n = x[0];
+  if(n==="IShowSpeed") return "Speed";
+  if(n==="Androgenic") return "Andro";
+  return n;
+});
     const values = sorted.map(x=>x[1]);
 
     ranges.forEach(r=>{
@@ -521,17 +555,27 @@ mode==="mog" ? "#00ffff" :
           }]
         },
         options:{
+  maintainAspectRatio:false,
           plugins:{
             legend:{display:false},
             tooltip:{enabled:false}
           },
           scales:{
-            y:{
-              beginAtZero:true,
-              ticks:{display:false},
-              grid:{display:false}
-            }
-          }
+  y:{
+    beginAtZero:true,
+    ticks:{display:false},
+    grid:{display:false}
+  },
+  x:{
+    ticks:{
+      display:true,
+      font:{size:9},
+      maxRotation:45,
+      minRotation:45
+    },
+    grid:{display:false}
+  }
+}
         }
       });
 
